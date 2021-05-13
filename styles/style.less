@@ -1,0 +1,89 @@
+// Color variables (appears count calculates by raw css)
+@color0: #ff0000; // Appears 3 times
+
+// Width variables (appears count calculates by raw css)
+@width0: 100%; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+@height0: 100%; // Appears 2 times
+
+body {
+  font-family: arial, sans-serif;
+  height: @height0;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: arial, sans-serif;
+  height: @height0;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+hr {
+  background-color:@color0;
+  border: 0 none;
+  height: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  width: 80%;
+}
+#ham_nav {
+  background: black;
+  position: sticky;
+  top: 0;
+  width: @width0;
+  label {
+    display: none;
+  }
+  input {
+    &:checked~#ham_items {
+      display: block;
+    }
+  }
+}
+#hamburger {
+  display: none;
+}
+#ham_items {
+  display: flex;
+  display: none;
+  a {
+    border-top: 1px solid black;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
+    width: @width0;
+    &:hover {
+      background: @color0;
+    }
+  }
+}
+@media {
+  screen {
+    and {
+    (max-width {
+      &:768px) {
+      #ham_nav label { display: inline-block;
+        background: @color0;
+        color: white;
+        font-size: 1.2em;
+        font-style: normal;
+        padding: 10px;
+      }
+    }
+    }
+    }
+  }
+}

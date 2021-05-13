@@ -1,0 +1,74 @@
+/* [ON BIG SCREEN] */
+
+body, html {
+  height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+hr {width: 80%; height: 5px; margin-left: auto; margin-right: auto; background-color:#FF0000; border: 0 none; margin-top: 5px; margin-bottom: 5px;}
+
+/* Wrapper */
+#ham_nav {
+  width: 100%;
+  background: black;
+  /* Optional */
+  position: sticky;
+  top: 0;
+}
+
+/* Hide Hamburger */
+#ham_nav label, #hamburger { display: none; }
+
+/* Horizontal Menu Items */
+#ham_items { display: flex; }
+#ham_items a {
+  width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+#ham_items a:hover {
+  background: #FF0000;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* Show Hamburger Icon */
+  #ham_nav label {
+    display: inline-block; 
+    color: white;
+    background: #FF0000;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #ham_items a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid black;
+  }
+
+  /* Toggle Show/Hide Menu */
+  #ham_items { display: none; }
+  #ham_nav input:checked ~ #ham_items { display: block;
+  }
+
+}
+
+/* [DOES NOT MATTER] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+}
