@@ -28,9 +28,11 @@
 
 <body>
 <main>
-    <div class="header_container">
-        <h1>CONTACT US</h1>
-    </div>
+    <header>
+        <div class="header_container">
+            <h1>CONTACT US</h1>
+        </div>
+    </header>
     <div class="body_container">
         <p>An information request form for Ace in the Hole Multisport Events.</p>
     </div>
@@ -47,7 +49,7 @@
         <input type="radio" name="contact_role" value="Athlete" />Athlete<br />
         <input type="radio" name="contact_role" value="Volunteer" />Volunteer<br />
 
-        <label id="contact_text"><h2>Enter Your Question Or Comment: </h2></label><input type="text" name="questionorcomment" /><br />
+        <label id="contact_text"><h2>Enter Your Question Or Comment: </h2></label><textarea name="questionorcomment"></textarea><br />
         <br />
         <label id="submit"></label>
         <input type="submit" value="Submit">
@@ -57,6 +59,13 @@
 <hr>
 </body>
 <footer>
+    <div class="nav">
+        <a href="index.php">HOME</a>
+        <a href="faq.php">F.A.Q.</a>
+        <a href="gallery.php">GALLERY</a>
+        <a href="register.php">REGISTER</a>
+        <a href="contact.php">CONTACT</a>
+    </div>
     <p>2021 | Site by Sylvia Horvath</p>
 </footer>
 <br>

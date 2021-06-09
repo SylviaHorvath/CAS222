@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME - Ace In The Hole Multisport Events</title>
+    <title>REGISTER - Ace In The Hole Multisport Events</title>
     <link rel="stylesheet" href="includes/style.css">
     <nav id="ham_nav">
         <!-- [THE HAMBURGER] -->
@@ -28,9 +28,11 @@
 
 <body>
 <main>
-    <div class="header_container">
-        <h1>REGISTER FOR UPCOMING EVENT</h1>
-    </div>
+    <header>
+        <div class="header_container">
+            <h1>REGISTER FOR UPCOMING EVENT</h1>
+        </div>
+    </header>
     <div class="body_container">
         <p>Athletes must read the <a href="faq.php">F.A.Q.</a> before registering.</p>
         <hr>
@@ -85,7 +87,7 @@
         <option name=sunfive value=five>Volunteer</option>
         </select><br />
 
-        <label id="accommodation_request"><h2>Any Special Accommodations Needed?: </h2></label><input type="text" name="accommodation_request" /><br />
+        <label id="accommodation_request"><h2>Any Special Accommodations Needed?: </h2></label><textarea name="accommodation_request"></textarea><br />
 
         <br />
 
@@ -98,6 +100,13 @@
 <hr>
 </body>
 <footer>
+    <div class="nav">
+        <a href="index.php">HOME</a>
+        <a href="faq.php">F.A.Q.</a>
+        <a href="gallery.php">GALLERY</a>
+        <a href="register.php">REGISTER</a>
+        <a href="contact.php">CONTACT</a>
+    </div>
     <p>2021 | Site by Sylvia Horvath</p>
 </footer>
 <br>

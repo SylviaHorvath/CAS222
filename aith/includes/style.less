@@ -1,84 +1,74 @@
-@primarycolor : #ff0000;
-@secondarycolor : #ffffff;
-@tertiarycolor : #000000;
-
 @mainfont : Arial, Helvetica, sans-serif;
-/* [ON BIG SCREEN] */
-/* definition list */
-/* arrow icon left */
-/* arrow icon down */
-/* Wrapper */
-/* Hide Hamburger */
-/* Horizontal Menu Items */
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-/* Clear floats after image containers */
-/* The Modal (background) */
-/* Modal Content */
-/* The Close Button */
-/* Hide the slides by default */
-/* Next & previous buttons */
-/* Position the "next button" to the right */
-/* On hover, add a black background color with a little bit see-through */
-/* Number text (1/3 etc) */
-/* Caption text */
-/* [ON SMALL SCREENS] */
-/* Show Hamburger Icon */
-/* Break down menu items into vertical */
-/* Toggle Show/Hide Menu */
-/* Responsive layout - makes a one column-layout instead of two columns */
-/* [DOES NOT MATTER] */
+// Color variables (appears count calculates by raw css)
+@color0: #ff0000; // Appears 7 times
+@color1: #000000; // Appears 2 times
+@color2: #999999; // Appears 2 times
+@color3: #ffffff;
+
+// Width variables (appears count calculates by raw css)
+@width: 100%; // Appears 11 times
+
+// Height variables (appears count calculates by raw css)
+@height: 100%; // Appears 6 times
+
 body {
-  height: 100%;
-  padding: 0;
+  font-family: arial, sans-serif;
+  height: @height;
   margin: 0;
-  font-family: @mainfont;
+  padding: 0;
 }
 html {
-  height: 100%;
-  padding: 0;
+  font-family: arial, sans-serif;
+  height: @height;
   margin: 0;
-  font-family: @mainfont;
+  padding: 0;
 }
 h1 {
-  font-family: @mainfont;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+h2 {
   text-align: center;
 }
 p {
-  font-family: @mainfont;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 a {
-  color: @primarycolor;
+  color: @color0;
+  font-size: 1.15em;
+  padding: 3px 3px;
+  text-decoration: none;
 }
 li {
   margin: 1em;
 }
 hr {
-  width: 80%;
+  background-color:@color0;
+  border: 0 none;
   height: 5px;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
-  background-color: @primarycolor;
-  border: 0 none;
   margin-top: 5px;
-  margin-bottom: 5px;
+  width: 80%;
 }
 dt {
-  font-family: @mainfont;
-  margin: 2px 0;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
-  margin: 1em;
   font-weight: bold;
+  margin: 1em;
+  margin: 2px 0;
   &:hover {
-    color: @primarycolor;
-    &:before {
-      border-left-color: @primarycolor;
+    color: @color0;
+    before {
+      border-left-color: @color0;
     }
   }
   &:before {
+    border-color: transparent transparent transparent @color1;
     border: 0.5em solid;
-    border-color: transparent transparent transparent @tertiarycolor;
     content: '';
     display: inline-block;
     height: 0;
@@ -88,20 +78,20 @@ dt {
   }
 }
 dd {
-  font-family: @mainfont;
-  margin: 2px 0;
-  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
+  font-weight: normal;
+  margin: 2px 0;
 }
 dt.open {
   &:before {
-    border-color: @tertiarycolor transparent transparent transparent;
     border-bottom-width: 0;
+    border-color: @color1 transparent transparent transparent;
   }
   &:hover {
-    &:before {
+    before {
       border-left-color: transparent;
-      border-top-color: @primarycolor;
+      border-top-color: @color0;
     }
   }
 }
@@ -118,13 +108,27 @@ form {
   padding-right: 1em;
   text-align: center;
 }
+.nav {
+  padding: 1em;
+  position: relative;
+  text-align: center;
+  a {
+    &:hover {
+      color: @color1;
+    }
+  }
+}
 #ham_nav {
-  width: 100%;
-  background: @tertiarycolor;
-  position: sticky;
+  background: @color1;
   top: 0;
+  width: @width;
   label {
     display: none;
+  }
+  input {
+    &:checked~#ham_items {
+      display: block;
+    }
   }
 }
 #hamburger {
@@ -132,15 +136,20 @@ form {
 }
 #ham_items {
   display: flex;
-  font-weight: bold;
+  display: none;
+  font-weight: normal;
   a {
-    width: 20%;
+    border-top: 1px solid @color1;
+    box-sizing: border-box;
+    color: @color3;
+    display: block;
     padding: 10px;
-    color: white;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+    width: 20%;
+    width: @width;
     &:hover {
-      background: @primarycolor;
+      background: @color0;
     }
   }
 }
@@ -148,132 +157,136 @@ form {
   display: flex;
   flex-wrap: wrap;
   padding: 0 5px;
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
+  &: {
+    after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 }
 .column {
+  flex: 100%;
   flex: 50%;
+  max-width: @width;
   padding: 5px;
   img {
     margin-top: 5px;
     vertical-align: middle;
-    width: 100%;
+    width: @width;
   }
 }
 .socials {
-  position: relative;
   overflow: hidden;
+  text-align: center;
 }
 .facebook-timeline {
+  border: 0;
+  height: @height;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+  width: @width;
 }
 .twitter-timeline {
+  border: 0;
+  height: @height0;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+  width: @width;
 }
 .modal {
+  background-color: @color1;
   display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
+  height: @height;
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   overflow: auto;
-  background-color: @tertiarycolor;
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  width: @width;
+  z-index: 1;
 }
 .modal-content {
-  position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 100%;
+  position: relative;
+  width: @width;
 }
 .close {
-  color: @secondarycolor;
-  position: absolute;
-  top: 10px;
-  right: 25px;
+  color: @color3;
   font-size: 35px;
   font-weight: bold;
+  position: absolute;
+  right: 25px;
+  top: 10px;
   &:hover {
-    color: #999;
-    text-decoration: none;
+    color: @color2;
     cursor: pointer;
+    text-decoration: none;
   }
   &:focus {
-    color: #999;
-    text-decoration: none;
+    color: @color2;
     cursor: pointer;
+    text-decoration: none;
   }
 }
 .mySlides {
   display: none;
-  width: 100%;
+  width: @width;
 }
 .prev {
+  -webkit-user-select: none;
+  border-radius: 0 3px 3px 0;
+  color: @color3;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -50px;
+  padding: 16px;
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: @secondarycolor;
-  font-weight: bold;
-  font-size: 20px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
-  -webkit-user-select: none;
+  width: auto;
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
   -webkit-user-select: none;
-  right: 0;
+  border-radius: 0 3px 3px 0;
   border-radius: 3px 0 0 3px;
+  color: @color3;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -50px;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transition: 0.6s ease;
+  user-select: none;
+  width: auto;
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
 .numbertext {
-  color: #f2f2f2;
+  color: @color3;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
 .caption-container {
-  text-align: center;
-  background-color: @tertiarycolor;
+  background-color: @color1;
+  color: @color3;
   padding: 2px 16px;
-  color: @secondarycolor;
+  text-align: center;
 }
 img.demo {
   opacity: 0.6;
@@ -294,89 +307,28 @@ img.hover-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
-@media screen and (max-width: 768px) {
-  #ham_nav {
-    label {
-      display: inline-block;
-      color: @secondarycolor;
-      background: @primarycolor;
-      font-style: normal;
-      font-size: 1.2em;
-      padding: 10px;
-    }
-    input {
-      &:checked {
-        ~ {
-          #ham_items {
-            display: block;
-          }
+#hero {
+  height: @height;
+  height: auto;
+  max-width: 768px;
+  position: relative;
+  width: @width;
+  width: @width;
+}
+@media {
+  screen {
+    and {
+    (max-width { &:768px;) {
+      #ham_nav label {
+          display: inline-block;
+          background: @color0;
+          color: @color3;
+          font-size: 1.2em;
+          font-style: normal;
+          padding: 10px;
         }
       }
     }
   }
-  #ham_items {
-    a {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border-top: 1px solid @tertiarycolor;
-    }
-    display: none;
-  }
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
 }
-
-hr {
-  background-color: @primarycolor;
-  border: 0 none;
-  height: 5px;
-  margin-bottom: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  width: 80%;
 }
-
-#ham_nav {
-  background: @tertiarycolor;
-  position: sticky;
-  top: 0;
-  width: @fullwidth;
-  label {
-      display: none;
-  }
-  input {
-      &:checked~#ham_items {
-          display: block;
-      }
-  }
-}
-#hamburger {
-  display: none;
-}
-#ham_items {
-  display: flex;
-  a {
-    border-top: 1px solid @tertiarycolor;
-    box-sizing: border-box;
-    color: @secondarycolor;
-    display: block;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    width: 20%;
-    &:hover {
-      background: @primarycolor;
-    }
-  }
-}
-.header_container {
-  margin: 0 auto;
-}
-.body_container {
-  margin: 0 auto;
-}
-

@@ -28,11 +28,13 @@
 
 <body>
 <main>
-    <div class="header_container">
-        <h1>FREQUENTLY ASKED QUESTIONS</h1>
-    </div>
+    <header>
+        <div class="header_container">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        </div>
+    </header>
     <div class="body_container">
-        <p>Athletes must read this page before registering for any event.</p>
+        <p>Athletes must read this page before <a href="register.php">REGISTERING</a> for any event.</p>
         <hr>
     <dl>
 
@@ -131,6 +133,13 @@
 <hr>
 </body>
 <footer>
+    <div class="nav">
+        <a href="index.php">HOME</a>
+        <a href="faq.php">F.A.Q.</a>
+        <a href="gallery.php">GALLERY</a>
+        <a href="register.php">REGISTER</a>
+        <a href="contact.php">CONTACT</a>
+    </div>
     <p>2021 | Site by Sylvia Horvath</p>
 </footer>
 <br>

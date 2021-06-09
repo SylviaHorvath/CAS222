@@ -28,9 +28,11 @@
 
 <body>
 <main>
-    <div class="header_container">
-        <h1>GALLERY - PAST EVENTS</h1>
-    </div>
+    <header>
+        <div class="header_container">
+            <h1>GALLERY - PAST EVENTS</h1>
+        </div>
+    </header>
     <div class="body_container">
         <p>Scroll through our gallery of past events hosted by Ace in the Hole Multisport Events at your leisure.</p>
         <p>Tap an image to see a photo in full.</p>
@@ -88,9 +90,6 @@
             <div class="column">
                 <img src="images/ace17.png" onclick="openModal();currentSlide(17)" class="hover-shadow">
             </div>
-            <div class="column">
-                <img src="images/ace18.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow">
-            </div>
         </div>
 
         <!-- The Modal/Lightbox -->
@@ -99,92 +98,87 @@
             <div class="modal-content">
 
                 <div class="mySlides">
-                    <div class="numbertext">1 / 18</div>
+                    <div class="numbertext">1 / 17</div>
                     <img src="images/ace1.jpg"  alt="Many women wearing swim caps and goggles are running through ankle deep water. A crowd is cheering in the background.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">2 / 18</div>
+                    <div class="numbertext">2 / 17</div>
                     <img src="images/ace2.jpg" alt="A group of people running on a track. The main focal point of the picture is a smiling person using walking aids. They are wearing a bright multicolored scarf tied in a knot around their neck.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">3 / 18</div>
+                    <div class="numbertext">3 / 17</div>
                     <img src="images/ace3.jpg" alt="A group of people on bicycles. Two bikers are raising their arms in elation and in celebration at crossing the finish line.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">4 / 18</div>
+                    <div class="numbertext">4 / 17</div>
                     <img src="images/ace4.jpg" alt="A group of women in wetsuits, swim caps and goggles running into the ocean. The coastal scene is set during presumably the early morning and the sky is clear.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">5 / 18</div>
+                    <div class="numbertext">5 / 17</div>
                     <img src="images/ace5.jpg" alt="A silhouette of bicyclists with the sun giving a bright lens flare in between the center biker's arms.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">6 / 18</div>
+                    <div class="numbertext">6 / 17</div>
                     <img src="images/ace6.jpg" alt="Three athletes wrap one arm around each other and pose for a photo in Barbados. Behind them is an idyllic beach scene with white sand and the partly cloudy sky almost matching the hue of the blue ocean beneath it.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">7 / 18</div>
+                    <div class="numbertext">7 / 17</div>
                     <img src="images/ace7.jpg" alt="A symmetrical photo taken from above a race. A crowd of runners are seen from behind running up a slight incline into the horizon.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">8 / 18</div>
+                    <div class="numbertext">8 / 17</div>
                     <img src="images/ace8.jpg" alt="A woman running and smiling wide for the camera. People are seen running behind her on a dirt and rocky road.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">9 / 18</div>
+                    <div class="numbertext">9 / 17</div>
                     <img src="images/ace9.jpg" alt="Smiling people in three wheeled bikes race towards the finish line. The man in front is raising a closed fist in visible joy.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">10 / 18</div>
+                    <div class="numbertext">10 / 17</div>
                     <img src="images/ace10.jpg" alt="A dark skinned person crosses the finish line. Their arms are raised with their index fingers raised in a 'number one' position.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">11 / 18</div>
+                    <div class="numbertext">11 / 17</div>
                     <img src="images/ace11.jpg" alt="People's legs are running towards the camera. The racer's bib numbers are visible but the racer's heads are not.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">12 / 18</div>
+                    <div class="numbertext">12 / 17</div>
                     <img src="images/ace12.jpg" alt="Bikers turning a corner. Most of the bikers have numbers painted on their arms.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">13 / 18</div>
+                    <div class="numbertext">13 / 17</div>
                     <img src="images/ace13.jpg" alt="A large crowd of people running towards the camera. The visible racers are of varied races, ages and genders.">
                 </div>
                 <div class="mySlides">
-                    <div class="numbertext">14 / 18</div>
+                    <div class="numbertext">14 / 17</div>
                     <img src="images/ace14.jpg" alt="Athletic women of varied races turn a corner in a race. There is a stadium and field behind them.">
                 </div>
                 <div class="mySlides">
-                    <div class="numbertext">15 / 18</div>
+                    <div class="numbertext">15 / 17</div>
                     <img src="images/ace15.jpg" alt="A wide shot of people of varied races, gender and ages running on a track. Some are using mobility aids including a wheelchair and forearm walking crutches.">
                 </div>
                 <div class="mySlides">
-                    <div class="numbertext">16 / 18</div>
+                    <div class="numbertext">16 / 17</div>
                     <img src="images/ace16.jpg" alt="A group of racers running past bystanders. There is a lush treeline in the background.">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">17 / 18</div>
+                    <div class="numbertext">17 / 17</div>
                     <img src="images/ace17.jpg" alt="A large group of runners in mostly orange long sleeved shirts that read 'WE RUN MAD'. Several people in front aren't wearing the shirts but the majority of the crowd are.">
                 </div>
 
-
-                <div class="mySlides">
-                    <div class="numbertext">18 / 18</div>
-                    <img src="images/ace18.jpg" alt="Graphic that reads: Ace in the Hole Multisport Events. It is primarily red and black with a line design in the background.">
-                </div>
 
                 <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -263,10 +257,6 @@
                 <div class="column">
                     <img class="demo" src="images/ace17.png" onclick="currentSlide(17)" alt="A large group of runners in mostly orange long sleeved shirts that read 'WE RUN MAD'. Several people in front aren't wearing the shirts but the majority of the crowd are.">
                 </div>
-
-                <div class="column">
-                    <img class="demo" src="images/ace18.jpg" onclick="currentSlide(18)" alt="Graphic that reads: Ace in the Hole Multisport Events. It is primarily red and black with a line design in the background.">
-                </div>
             </div>
         </div>
     </div>
@@ -275,9 +265,15 @@
 <hr>
 </body>
 <footer>
+    <div class="nav">
+        <a href="index.php">HOME</a>
+        <a href="faq.php">F.A.Q.</a>
+        <a href="gallery.php">GALLERY</a>
+        <a href="register.php">REGISTER</a>
+        <a href="contact.php">CONTACT</a>
+    </div>
     <p>2021 | Site by Sylvia Horvath</p>
 </footer>
-<br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     // Open the Modal
